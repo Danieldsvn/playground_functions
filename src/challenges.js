@@ -15,9 +15,35 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(texto) {
+    let word = ''; // armazena cada palavra temporariamente
+    let words = []; // armazena as palavras que foram separadas do espaço vazio    
+  // Vamos procurar um espaço vazio no parametro inserido
+    let blank = ' '; // armazena espaço vazio    
+    
+    // let textoRestanteAux = '';
+  // vamos percorrer todos os elementos do texto restante
+  for (let i = 0; i < texto.length - 1; i += 1) {
+    // encontrando o elemento vazio
+    if ( texto[i] == blank) {             
+        for (let j = 0; j < i; j += 1) { // armazenando a palavra antes do espaço vazio
+          word = word + texto[j];    
+        }        
+        words.push(word);
+        word = '';   
+        // // armazenando texto restante
+        // for (let j = i + 1; j < texto.length; j += 1) {
+        //   textoRestanteAux = textoRestanteAux + textoRestante[j];
+        // } 
+        // textoRestante = textoRestanteAux;
+        // words.push(textoRestante);
+        // textoRestanteAux = '';
+    // }    
+  } 
+  return words; 
+ }
 }
+console.log(splitSentence("ping pong"));
 
 // Desafio 4
 function concatName() {
@@ -25,8 +51,10 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  score = (wins * 3) + (ties * 1);
+  return score;
+  
 }
 
 // Desafio 6
