@@ -45,12 +45,18 @@ function splitSentence(texto) {
   
 //  }
 // }
-console.log(splitSentence("ping pong"));
+// console.log(splitSentence("ping pong"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(string) {
+   let array2 = '';
+   array2 = string[string.length - 1];  
+   array2 = array2 + ', ' + string[0];
+   return array2;
+  
 }
+string = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+console.log(concatName(string));
 
 // Desafio 5
 function footballPoints(wins, ties) {
