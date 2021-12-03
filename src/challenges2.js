@@ -6,6 +6,9 @@ function techList(tech, name) {
 }
 else {
   
+  for ( i = 0; i < tech.length; i += 1) {
+
+  }
 }
 
 }

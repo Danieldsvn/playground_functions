@@ -16,36 +16,10 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(texto) {
-  array = texto.split(' ');
-  //   let word = ''; // armazena cada palavra temporariamente
-  //   let words = []; // armazena as palavras que foram separadas do espaço vazio    
-  // // Vamos procurar um espaço vazio no parametro inserido
-  //   let blank = ' '; // armazena espaço vazio    
-    
-  
-  // vamos percorrer todos os elementos do texto
-  // for (let i = 0; i < texto.length - 1; i += 1) {
-  //   // encontrando o elemento vazio
-  //   if ( texto[i] == blank) {             
-  //       for (let j = 0; j < i; j += 1) { // armazenando a palavra antes do espaço vazio
-  //         word = word + texto[j];    
-  //       }        
-  //       words.push(word);
-  //       word = '';   
-        // // armazenando texto restante
-        // for (let j = i + 1; j < texto.length; j += 1) {
-        //   textoRestanteAux = textoRestanteAux + textoRestante[j];
-        // } 
-        // textoRestante = textoRestanteAux;
-        // words.push(textoRestante);
-        // textoRestanteAux = '';
-    // }    
+  array = texto.split(' ');  
     return array; 
-  } 
-  
-//  }
-// }
-// console.log(splitSentence("ping pong"));
+  }  
+
 
 // Desafio 4
 function concatName(string) {
@@ -55,8 +29,7 @@ function concatName(string) {
    return array2;
   
 }
-string = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-console.log(concatName(string));
+
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -82,9 +55,7 @@ function highestCount(array) {
   
   return contadorMaiorNumero;
 
-}
-console.log(highestCount([3,3,1]));
-
+} 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Distance = cat1 - mouse;
@@ -99,7 +70,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return "cat2";
   }
 }
-console.log(catAndMouse(2, 3, 4));
+
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -121,50 +92,56 @@ function fizzBuzz(array) {
   return fizzBuzzArray;
 }
 
-// Desafio 9
+// Desafio 9 // --- ajuda de João Paulo Turma 19 B para achar o método śplit e join. ---
 function encode(strToEncode) {  
-  for (i = 0; i < strToEncode.length; i += 1){
-    if (strToEncode[i] === 'a') {
-      strToEncode[i] = '1';
+  let StringToArray = strToEncode.split(''); 
+  for (i = 0; i < strToEncode.length; i += 1){    
+    if (StringToArray[i] === 'a') {
+      StringToArray[i] = '1';
     }
-    if (strToEncode[i] === 'e') {
-      strToEncode[i] = '2';
+    if (StringToArray[i] === 'e') {
+      StringToArray[i] = '2';
     }
-    if (strToEncode[i] === 'i') {
-      strToEncode[i] = '3';
+    if (StringToArray[i] === 'i') {
+      StringToArray[i] = '3';
     }
-    if (strToEncode[i] === 'o') {
-      strToEncode[i] = '4';
+    if (StringToArray[i] === 'o') {
+      StringToArray[i] = '4';
     }
-    if (strToEncode[i] === 'u') {
-      strToEncode[i] = '5';
+    if (StringToArray[i] === 'u') {
+      StringToArray[i] = '5';
     }
-  }
-  let strEncoded = strToEncode;
+  }  
+  let strEncoded = StringToArray.join('');
   return strEncoded;
 }
-console.log(encode('artur'));
+strToEncode = 'artur bonitão';
+console.log(encode(strToEncode));
 
 function decode(strToEncode) {
-  for (i = 0; i < strToEncode.length; i += 1){
-    if (strToEncode[i] == '1') {
-      strToEncode[i] = 'a';
+  let StringToArray = strToEncode.split('');
+  for (i = 0; i < strToEncode.length; i += 1){    
+    if (StringToArray[i] === '1') {
+      StringToArray[i] = 'a';
     }
-    if (strToEncode[i] == '2') {
-      strToEncode[i] = 'e';
+    if (StringToArray[i] === '2') {
+      StringToArray[i] = 'e';
     }
-    if (strToEncode[i] == '3') {
-      strToEncode[i] = 'i';
+    if (StringToArray[i] === '3') {
+      StringToArray[i] = 'i';
     }
-    if (strToEncode[i] == '4') {
-      strToEncode[i] = 'o';
+    if (StringToArray[i] === '4') {
+      StringToArray[i] = 'o';
     }
-    if (strToEncode[i] == '5') {
-      strToEncode[i] = 'u';
+    if (StringToArray[i] === '5') {
+      StringToArray[i] = 'u';
     }
-  }
-  return strToEncode;
+  }  
+  let strEncoded = StringToArray.join('');
+  return strEncoded;  
 }
+strToEncode = '1rt5r b4n3tã4';
+console.log(decode(strToEncode));
 
 module.exports = {
   calcArea,
@@ -178,3 +155,11 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+let string = 'arroz feijão';
+ let stringArreizada = string.split('');
+console.log(stringArreizada);
+
+stringArreizada[2] = '2';
+console.log(stringArreizada);
+
