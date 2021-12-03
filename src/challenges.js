@@ -61,12 +61,12 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   maiorNumero = array[0];
   contadorMaiorNumero = 0;
-  for (let i = 0; i < array.length - 1; i += 1 ) {
+  for (let i = 0; i < array.length; i += 1 ) {
     if (array[i] > maiorNumero) {
       maiorNumero = array[i];
     }
   }
-  for (let i = 0; i < array.length - 1; i += 1) {
+  for (let i = 0; i < array.length; i += 1) {
     if (maiorNumero == array[i]) {
       contadorMaiorNumero += 1;
     }
@@ -75,7 +75,7 @@ function highestCount(array) {
   return contadorMaiorNumero;
 
 }
-console.log(highestCount([1,1,1]));
+console.log(highestCount([3,3,1]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -114,11 +114,48 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(strToEncode) {  
+  for (i = 0; i < strToEncode.length; i += 1){
+    if (strToEncode[i] === 'a') {
+      strToEncode[i] = '1';
+    }
+    if (strToEncode[i] === 'e') {
+      strToEncode[i] = '2';
+    }
+    if (strToEncode[i] === 'i') {
+      strToEncode[i] = '3';
+    }
+    if (strToEncode[i] === 'o') {
+      strToEncode[i] = '4';
+    }
+    if (strToEncode[i] === 'u') {
+      strToEncode[i] = '5';
+    }
+  }
+  let strEncoded = strToEncode;
+  return strEncoded;
 }
-function decode() {
-  // seu código aqui
+console.log(encode('artur'));
+
+function decode(strToEncode) {
+  for (i = 0; i < strToEncode.length; i += 1){
+    if (strToEncode[i] == '1') {
+      strToEncode[i] = 'a';
+    }
+    if (strToEncode[i] == '2') {
+      strToEncode[i] = 'e';
+    }
+    if (strToEncode[i] == '3') {
+      strToEncode[i] = 'i';
+    }
+    if (strToEncode[i] == '4') {
+      strToEncode[i] = 'o';
+    }
+    if (strToEncode[i] == '5') {
+      strToEncode[i] = 'u';
+    }
+  }
+  return strToEncode;
 }
 
 module.exports = {
