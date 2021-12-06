@@ -65,8 +65,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numberFinder = /\d+/g; // detecta números da string
+  let number = string.match(numberFinder); // separa os números em formato de string em uma array
+  let soma = 0;
+  for ( let i = 0; i < number.length; i += 1) {
+    soma = soma + parseInt(number[i]); // parseInt coverte string em número. 
+  }
+  if ( soma > 1) {
+    return soma + ' copos de água';
+  }
+  return soma + ' copo de água';
+  
+    
 }
 
 module.exports = {
