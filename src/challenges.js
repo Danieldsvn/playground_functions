@@ -143,18 +143,6 @@ function decode(strToEncode) {
 strToEncode = '1rt5r b4n3tã4';
 console.log(decode(strToEncode));
 
-module.exports = {
-  calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  highestCount,
-  splitSentence,
-};
 
 let string = 'arroz feijão';
  let stringArreizada = string.split('');

@@ -80,10 +80,3 @@ function hydrate(string) {
     
 }
 
-module.exports = {
-  generatePhoneNumber,
-  techList,
-  hydrate,
-  triangleCheck,
-};
-
